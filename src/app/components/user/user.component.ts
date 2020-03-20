@@ -11,18 +11,18 @@ export class UserComponent {
     firstName = 'Robin';
     lastName = 'Hooda';
     age = '23';
-
+    address = {
+        city: 'Gohana',
+        state: 'Haryana',
+        country: 'IN'
+    };
     // Methods
     constructor() {
-        this.showName();
-        this.showBirthday();
+
     }
 
-    showName() {
-        console.log(`Name : ${this.firstName} ${this.lastName}`);
+    showAge() {
+        return this.age;
     }
 
-    showBirthday() {
-        console.log(`Age : ${this.age}`);
-    }
 }
