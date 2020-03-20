@@ -1,5 +1,13 @@
 <h2>{{firstName}} {{lastName}}</h2>
 <ul>
-  <li> Age : {{showAge()}} </li>
+  <li> Age : {{ showAge() }} </li>
   <li> Address : {{address.city}} {{address.state}} , {{address.country}}</li>
+  <li> Graduate : {{graduate}}</li>
+  <li> Marks
+    <ul>
+      <li> Graduation (B.Tech) : {{marks[0]}}</li>
+      <li> Higher Secondary (12th) : {{marks[1]}}</li>
+      <li> Matriculation (10th) : {{marks[2]}}</li>
+    </ul>
+  </li>
 </ul>
