@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from 'src/app/models/User';
 
 @Component({
     selector: 'app-user',
@@ -33,14 +34,4 @@ export class UserComponent {
     showAge() {
         return this.user.age;
     }
-}
-
-interface User {
-    firstName: string;
-    lastName: string;
-    role: string;
-    age: number;
-    address;
-    graduate: boolean;
-    marks: number[];
 }
