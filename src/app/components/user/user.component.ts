@@ -8,31 +8,38 @@ import { Component } from '@angular/core';
 
 export class UserComponent {
     // Properties
-    firstName: string;
-    lastName: string;
-    age: number;
-    address;
-    graduate: any;
-    marks: number[];
+    user: {
+        firstName: string;
+        lastName: string;
+        role: string;
+        age: number;
+        address;
+        graduate: boolean;
+        marks: number[];
+    };
+
 
     // Methods
     constructor() {
-        this.firstName = 'Robin';
-        this.lastName = 'Hooda';
-        this.age = 23;
+        this.user = {
+            firstName: 'Robin',
+            lastName: 'Hooda',
+            role: 'Full Stack Developer',
+            age: 23,
 
-        this.address = {
-            city: 'Gohana',
-            state: 'Haryana',
-            country: 'IN'
+            address: {
+                city: 'Gohana',
+                state: 'Haryana',
+                country: 'IN'
+            },
+
+            graduate: true,
+            marks: [80, 83, 94]
         };
-
-        this.graduate = true;
-        this.marks = [80, 83, 94];
     }
 
     showAge() {
-        return this.age;
+        return this.user.age;
     }
 
 }

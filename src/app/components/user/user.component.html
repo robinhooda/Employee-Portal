@@ -1,13 +1,14 @@
-<h2>{{firstName}} {{lastName}}</h2>
+<h2>{{user.firstName}} {{user.lastName}}</h2>
+<h3>{{user.role}}</h3>
 <ul>
-  <li> Age : {{ showAge() }} </li>
-  <li> Address : {{address.city}} {{address.state}} , {{address.country}}</li>
-  <li> Graduate : {{graduate}}</li>
+  <li> Age : {{showAge() }} </li>
+  <li> Address : {{user.address.city}} {{user.address.state}} , {{user.address.country}}</li>
+  <li> Graduate : {{user.graduate}}</li>
   <li> Marks
     <ul>
-      <li> Graduation (B.Tech) : {{marks[0]}}</li>
-      <li> Higher Secondary (12th) : {{marks[1]}}</li>
-      <li> Matriculation (10th) : {{marks[2]}}</li>
+      <li> Graduation (B.Tech) : {{user.marks[0]}}</li>
+      <li> Higher Secondary (12th) : {{user.marks[1]}}</li>
+      <li> Matriculation (10th) : {{user.marks[2]}}</li>
     </ul>
   </li>
 </ul>
