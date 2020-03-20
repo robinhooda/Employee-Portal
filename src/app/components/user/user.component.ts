@@ -8,15 +8,7 @@ import { Component } from '@angular/core';
 
 export class UserComponent {
     // Properties
-    user: {
-        firstName: string;
-        lastName: string;
-        role: string;
-        age: number;
-        address;
-        graduate: boolean;
-        marks: number[];
-    };
+    user: User;
 
 
     // Methods
@@ -41,5 +33,14 @@ export class UserComponent {
     showAge() {
         return this.user.age;
     }
+}
 
+interface User {
+    firstName: string;
+    lastName: string;
+    role: string;
+    age: number;
+    address;
+    graduate: boolean;
+    marks: number[];
 }
