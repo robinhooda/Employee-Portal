@@ -1,4 +1,4 @@
-<ol>
+<ol *ngIf="users.length > 0">
   <li *ngFor="let user of users">
     <h3>
       {{user.firstName}} {{user.lastName}}
@@ -12,3 +12,5 @@
     </ul>
   </li>
 </ol>
+
+<h3 *ngIf="users.length == 0"> No Users found </h3>
