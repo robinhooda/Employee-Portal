@@ -6,6 +6,7 @@ import { User } from 'src/app/models/User';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css']
 })
+
 export class UsersComponent implements OnInit {
   users: User[];
 
@@ -24,7 +25,6 @@ export class UsersComponent implements OnInit {
           state: 'Haryana',
           country: 'IN'
         }
-
       },
       {
         firstName: 'Mohan',
@@ -37,7 +37,6 @@ export class UsersComponent implements OnInit {
           state: 'Haryana',
           country: 'IN'
         }
-
       },
       {
         firstName: 'Arjun',
@@ -50,9 +49,27 @@ export class UsersComponent implements OnInit {
           state: 'Telangana',
           country: 'IN'
         }
-
       }
     ];
+
+    // Initialize the data to be passed in addUser() method
+    this.addUser({
+      firstName: 'Bipul',
+      lastName: 'Jha',
+      role: 'UX Designer',
+      age: 21,
+
+      address: {
+        city: 'Patna',
+        state: 'Bihar',
+        country: 'IN'
+      }
+    });
+  }
+
+  // To add any data of another user in the users
+  addUser(user: User) {
+    this.users.push(user);
   }
 
 }
