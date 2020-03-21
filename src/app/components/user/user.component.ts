@@ -27,11 +27,9 @@ export class UserComponent implements OnInit {
                 city: 'Gohana',
                 state: 'Haryana',
                 country: 'IN'
-            },
-
-            graduate: true,
-            marks: [80, 83, 94]
+            }
         };
+
     }
 
 }

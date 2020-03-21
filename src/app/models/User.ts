@@ -4,6 +4,4 @@ export interface User {
     role: string;
     age: number;
     address;
-    graduate: boolean;
-    marks: number[];
 }
