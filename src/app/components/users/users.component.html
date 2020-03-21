@@ -1,5 +1,5 @@
-<ol *ngIf="users.length > 0">
-  <li *ngFor="let user of users">
+<ol *ngIf="users.length > 0;else noUsers">
+  <li *ngFor=" let user of users">
     <h3>
       {{user.firstName}} {{user.lastName}}
     </h3>
@@ -13,4 +13,6 @@
   </li>
 </ol>
 
-<h3 *ngIf="users.length == 0"> No Users found </h3>
+<ng-template #noUsers> No Users found </ng-template>
+
+<!-- <h3 *ngIf="users.length == 0"> No Users found </h3> -->
