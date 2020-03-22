@@ -1,12 +1,12 @@
 <!-- Here, instead of users.length , users?.length is used to make the second conditional optional -->
 <ol *ngIf="loaded && users?.length > 0">
   <li *ngFor=" let user of users">
-    <h3>
-      {{user.firstName}} {{user.lastName}}
-    </h3>
     <h4>
-      {{user.role}}
+      {{user.firstName}} {{user.lastName}}
     </h4>
+    <h5>
+      {{user.role}}
+    </h5>
     <ul *ngIf="showExtended">
       <li *ngIf="user.age"> Age : {{user.age}} </li>
       <li> Address : {{user.address.city}} {{user.address.state}} , {{user.address.country}}</li>
