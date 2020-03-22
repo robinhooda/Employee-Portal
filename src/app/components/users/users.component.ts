@@ -9,10 +9,13 @@ import { User } from 'src/app/models/User';
 
 export class UsersComponent implements OnInit {
   users: User[];
+  showExtended: boolean = true;
+  loaded: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
+
     this.users = [
       {
         firstName: 'Robin',
@@ -52,13 +55,14 @@ export class UsersComponent implements OnInit {
       }
     ];
 
+    this.loaded = true;
+
+
     // Initialize the data to be passed in addUser() method
     this.addUser({
       firstName: 'Bipul',
       lastName: 'Jha',
       role: 'UX Designer',
-      age: 21,
-
       address: {
         city: 'Patna',
         state: 'Bihar',
