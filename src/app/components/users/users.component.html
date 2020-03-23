@@ -1,15 +1,16 @@
 <!-- Here, instead of users.length , users?.length is used to make the second conditional optional -->
-<ol *ngIf="loaded && users?.length > 0">
-  <li *ngFor=" let user of users">
+<ol class="list-unstyled" *ngIf="loaded && users?.length > 0">
+  <li class="card card-body mb-3" *ngFor=" let user of users">
     <h4>
       {{user.firstName}} {{user.lastName}}
     </h4>
     <h5>
       {{user.role}}
     </h5>
-    <ul *ngIf="showExtended">
-      <li *ngIf="user.age"> Age : {{user.age}} </li>
-      <li> Address : {{user.address.city}} {{user.address.state}} , {{user.address.country}}</li>
+    <ul class="list-group" *ngIf="showExtended">
+      <li class="list-group-item" *ngIf="user.age"> Age : {{user.age}} </li>
+      <li class="list-group-item"> Address : {{user.address.city}} {{user.address.state}} , {{user.address.country}}
+      </li>
     </ul>
   </li>
 </ol>
